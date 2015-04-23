@@ -1,6 +1,6 @@
 # Some Explanation
 
-See the README file itself for Radford Neal's explanation.
+See the [README](README) file itself for Radford Neal's explanation.
 
 In `ex-mixdft` you find the scripts to run the algorithms (`ex` stands for experiment) in the "Markov chain sampling methods for Dirichlet process mixture models" report.
 
@@ -56,5 +56,15 @@ First, I had to look several times to see how the following sentence was impleme
     For all c \in {c_i, \ldots, c_n}: Draw a new value from \phi_c | ( y_i s.t. c_i = c)
 
 This is done by the parameter `gibbs-params`!
+
+# Radford's own explanation
+
+If you read it in this order, you will be fine.
+
+* http://www.cs.toronto.edu/~radford/fbm.2004-11-10.doc/index.html
+* http://www.cs.toronto.edu/~radford/fbm.2004-11-10.doc/Overview.html
+* http://www.cs.toronto.edu/~radford/fbm.2004-11-10.doc/mc-spec.html
+* http://www.cs.toronto.edu/~radford/fbm.2004-11-10.doc/mix-mc.html
+* http://www.cs.toronto.edu/~radford/fbm.2004-11-10.doc/Ex-mixdft-b.html
 
 
