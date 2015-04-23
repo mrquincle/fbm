@@ -24,7 +24,7 @@ The (adjusted) content of this specific script:
 
     mix-display slog-met
 
-The abbreviation `met` stands for Metropolis-Hastings. The variable `met-indicators` is variable `R` in the algorithm (the  number of iterations of the MH step).
+The abbreviation `met` stands for Metropolis-Hastings. Here `met-indicators` means algorithm 5. The variable after `met-indicators` is variable `R` in the algorithm (the number of iterations of the MH step), so `R=4`.
 
 It is possible to plot something with
 
