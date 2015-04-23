@@ -12,15 +12,15 @@ Subsequently running `./scmds-met` creates a very, very large binary (so, in the
 
 The (adjusted) content of this specific script:
 
-	 # Test of Algorithm 5 with R=4 on the simple data set.
-	 mix-spec slog-met 0 1 / x1 1 
-	 model-spec slog-met real 0.1
-	 data-spec slog-met 0 1 / sdata .
+    # Test of Algorithm 5 with R=4 on the simple data set.
+    mix-spec slog-met 0 1 / x1 1 
+    model-spec slog-met real 0.1
+    data-spec slog-met 0 1 / sdata .
 
-	 mc-spec slog-met repeat 100 met-indicators 5 gibbs-params 
-	 mix-mc slog-met 1
-	 mc-spec slog-met met-indicators 4 gibbs-params
-	 mix-mc slog-met 500
+    mc-spec slog-met repeat 100 met-indicators 5 gibbs-params 
+    mix-mc slog-met 1
+    mc-spec slog-met met-indicators 4 gibbs-params
+    mix-mc slog-met 500
 
     mix-display slog-met
 
