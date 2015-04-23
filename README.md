@@ -49,6 +49,12 @@ The call to `mix_sort` only removes unused "components" (that became empty becau
 
 Radford makes use of log probability, so the acceptance is formulated as `dp < 0`, where `dp = lp - np`, with `lp` the old likelihood, and `np` the likelihood of the proposal distribution.
 
-I can't find where the usual updates to the component variables occurs...
+By the way, you see reference to `it->` through the code. This is just a bookkeeping device for printing stats afterwards.
 
-You see reference to `it->` through the code. This is just a bookkeeping device for printing stats afterwards.
+First, I had to look several times to see how the following sentence was implemented:
+
+    For all c \in {c_i, \ldots, c_n}: Draw a new value from \phi_c | ( y_i s.t. c_i = c)
+
+This is done by the parameter `gibbs-params`!
+
+

@@ -8,4 +8,7 @@ data-spec slog-met 0 1 / sdata .
 mc-spec slog-met repeat 100 met-indicators 5 gibbs-params 
 mix-mc slog-met 1
 mc-spec slog-met met-indicators 4 gibbs-params
-mix-mc slog-met 20000
+mix-mc slog-met 500
+
+# limit to 500 for now, or else the file it generates is huge
+mix-display slog-met
