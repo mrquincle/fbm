@@ -35,7 +35,7 @@ The mixture model inference is implemented in `/mix`.
 
 The `met-indicators` function can be found in [mix-mc.c](mix/mix-mc.c).
 
-We are considering real values, so `model->type='R'`, see [model.h](util/model.h). Basically for MH, the only other option is binary. The log probably of an observation (called a "case") given a component is given by `case_prob`. The term `offsets` is used for the means of the components. The current number of selected groups is a global variable `N_active`.
+We are considering real values, so `model->type='R'`, see [model.h](util/model.h). In the code I saw that the only other option that is implemented is binary (`B`). The log probability of a "case" (observation) given a "target" (component) is given by `case_prob`. The term `offsets` is used for the means of the components. The current number of selected groups is a global variable `N_active` (which plays a double role of index of the last "table").
 
 You see that a new component is picked through:
 
@@ -43,9 +43,9 @@ You see that a new component is picked through:
 
 And likewise the covariance matrix `noise_SD` is generated through a call to `prior_pick_sigma`.
 
-Like you see per "observation" (case) `i` there are several "targets" `t`. So, for observation `i=2` you need to skip `N_targets` to reach the set of target values for `i=2`.
+Regarding indexes, in the code you can see that per "case" `i` there are several "targets" `t`. So, for observation `i=2` you need to skip `N_targets` to reach the set of target values for `i=2`.
 
-The call to `mix_sort` only removes unused "components" (that became empty because there are no observations related to it anymore).
+The call to `mix_sort` only removes unused components (that became empty because there are no observations related to it anymore).
 
 Radford makes use of log probability, so the acceptance is formulated as `dp < 0`, where `dp = lp - np`, with `lp` the old likelihood, and `np` the likelihood of the proposal distribution.
 
