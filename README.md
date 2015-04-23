@@ -47,8 +47,8 @@ Like you see per "observation" (case) `i` there are several "targets" `t`. So, f
 
 The call to `mix_sort` only removes unused "components" (that became empty because there are no observations related to it anymore).
 
-Radford makes use of log probability, so the acceptance is formation as `dp < 0`, where `dp = lp - np`, with `lp` the old likelihood, and `np` the likelihood of the proposal distribution.
+Radford makes use of log probability, so the acceptance is formulated as `dp < 0`, where `dp = lp - np`, with `lp` the old likelihood, and `np` the likelihood of the proposal distribution.
 
-
+I can't find where the usual updates to the component variables occurs...
 
 You see reference to `it->` through the code. This is just a bookkeeping device for printing stats afterwards.
